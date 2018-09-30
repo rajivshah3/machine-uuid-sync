@@ -1,4 +1,6 @@
+const machineUuid = require( "..")
 
+let uuid;
 module.exports['id'] = function(test) {
   const getid = require("../index");
   id1 = getid();

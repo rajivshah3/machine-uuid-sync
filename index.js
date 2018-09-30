@@ -1,12 +1,13 @@
-
 const {execSync} = require("child_process");
 const os = require("os");
-
+const fs = require("fs");
+const path = require("path");
+const UUID = require('uuid');
 let uuid;
 
 const uuidRegex = /\w{8}-\w{4}-\w{4}-\w{4}-\w{12}/;
 
-let defaultUuidFolder = __dirname;
+let defaultUuidFolder = os.homedir();
 
 module.exports = function(filepath) {
   if (filepath) { defaultUuidFolder = filepath; }
@@ -78,7 +79,7 @@ var defaultUuid = function() {
   if (fs.existsSync(f)) {
     return fs.readFileSync(f).toString();
   } else {
-    const id = require('node-uuid').v1();
+    const id = UUID.v1();
     fs.writeFileSync(f, id);
     return id;
   }

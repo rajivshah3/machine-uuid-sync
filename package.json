@@ -20,9 +20,9 @@
   "author": "albertsgrc <albertsgrc@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "node-uuid": "1.4.1"
+    "uuid": "^3.1.0"
   },
   "devDependencies": {
-    "nodeunit": "^0.9.1"
+    "nodeunit": "^0.11.2"
   }
 }
